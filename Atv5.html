@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>5 Escreva um programa em JavaScript que exiba na tela uma mensagem
+        de acordo com o valor de uma variável. Se a variável for igual a "a", exiba
+        "A". Se a variável for igual a "b", exiba "B". Se a variável não for nem "a"
+        nem "b", exiba "Outra letra".</h3>
+
+<center>
+    <form id="meuFormulario">
+        <label for="letra">Insira uma letra:</label>
+        <input type="text" id="letra" name="letra">
+        <button type="submit">Enviar</button>
+    </form>
+</center>
+
+    <script>
+        const formulario = document.getElementById('meuFormulario');
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault(); // impede o envio do formulário
+
+            const letra = (document.getElementById('letra').value);
+
+            if (letra === '') {
+                alert('Preencha o campo!');
+                return false;
+            }
+            if(letra === "a"){
+                alert("A");
+            }
+            if(letra === "b"){
+                alert("B");
+            }
+            if(letra !== "a" && letra !== "b"){
+                alert("Outra Letra!");
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

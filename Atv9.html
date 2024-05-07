@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>9 - Escreva um programa em JavaScript que exiba na tela o maior número
+        de um vetor.</h3>
+    <center>
+        <form id="meuFormulario">
+            <label for="Numero1">Maior numero do vetor: [0, 12, 13, 2, 1273, 28, 1] </label>
+            <button type="submit">Calcular</button>
+        </form>
+    </center>
+
+
+    <script>
+
+        var Vetor = [0, 12, 13, 2, 1273, 28, 1];
+        var maior = Math.max.apply(null, Vetor);
+
+        const formulario = document.getElementById('meuFormulario');
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault(); // impede o envio do formulário
+
+            if (Vetor === '') {
+                alert('Preencha ambos os campos com números válidos');
+                return false;
+            }
+            else {
+                alert(maior)
+            }
+        });
+    </script>
+</body>
+
+</html>

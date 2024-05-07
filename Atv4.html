@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>4 - Escreva um programa em JavaScript que exiba na tela a média dos
+        números de um vetor.</h3>
+<center>
+    <form id="meuFormulario">
+        <label for="Numero1">Média do vetor [1, 2, 5, 9] </label>
+        <button type="submit">Calcular</button>
+    </form>
+</center>
+    
+
+    <script>
+
+        const numero1 = [1, 2, 5, 9];
+
+        const formulario = document.getElementById('meuFormulario');
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault(); // impede o envio do formulário
+
+            if (numero1 === '') {
+                alert('Preencha ambos os campos com números válidos');
+                return false;
+            }
+            else{
+                alert((numero1[0] * numero1[1] * numero1[2] * numero1[3]) / 4)
+            }
+        });
+    </script>
+</body>
+
+</html>
